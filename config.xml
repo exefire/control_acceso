@@ -7,7 +7,7 @@
   <name>Control Acceso</name>
   <description>Control de Acceso para emergencias</description>
   <author href="http://www.exefire.com" email="egallardo@exefire.com">Exequiel Gallardo</author>
-  <preference name="phonegap-version" value="4.0.0" />
+  <preference name="phonegap-version" value="3.7.0" />
   <preference name="orientation" value="landscape" />
   <preference name="prerendered-icon" value="true" />
   <icon src="res/icon.png" default="true" />
