@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 <title>Control de Acceso</title>
+<?php /* <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> */?>
 <script src="//code.jquery.com/jquery-1.9.1.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
@@ -125,6 +126,22 @@ a:active {
 </style>
 </head>
 <body>
+<?php 
+function caja($id){
+	echo '<a href="javascript:;" onClick="dialogo_titulo('.$id.')"><div class="titulo" id="titulo'.$id.'">Caja</div></a>
+				<div class="tile__list" id="box'.$id.'">
+        <div class="cuadro">11</div>
+        <div class="cuadro">11</div>
+        <div class="cuadro">11</div>
+        <div class="cuadro">11</div>
+        <div class="cuadro">11</div>
+        <div class="cuadro">11</div>
+        <div class="cuadro">11</div>
+        <div class="cuadro">11</div>
+        <div class="cuadro">11</div>
+      </div>';
+}
+?>
 <div id="multi" style="background:#000; height:100%;">
   <div style="height:5%; min-height:25px;" id="barra_superior">
   	<div style="display:inline-block; float:left; width:25%; min-width:200px; height:100%;"><div style="padding-left:2%;"><div class="hora_bloque"><strong>Registro</strong>:</div>        <input name="registro" id="registro" type="tel" size="4" maxlength="4" style="margin-left:1%; border:none; background:#FFF; color:#00F;"> <input type="button" name="button" id="button" value="+" onClick="boton()" style="background:#EFEFEF; border:none;"></div></div>
@@ -133,18 +150,7 @@ a:active {
   </div>
   <div style="clear:both;"></div>
   <div style="background:#0FF; height:70%;">
-    <div style="background:#09F; width:25%; float:left; display:inline-block; height:100%;"><a href="javascript:;" onClick="dialogo_titulo(1)"><div class="titulo" id="titulo1">Caja</div></a>
-				<div class="tile__list" id="box1">
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-      </div></div>
+    <div style="background:#09F; width:25%; float:left; display:inline-block; height:100%;"><?php caja(1);?></div>
     <div style="background:#F9C; width:50%; float:left; display:inline-block; height:100%;">
       <div style="background:#CCC; width:100%; float:left; display:inline-block; height:10%; text-align:center;">
         <h2>CHARLIE </h2>
@@ -153,54 +159,10 @@ a:active {
         <div style="padding-top:250%;"><h2 class="rotar">BRAVO</h2></div>
       </div>
       <div style="background:#000; width:80%; height:80%; float:left; display:inline-block;">
-        <div style="background:#FFF; width:50%; float:left; display:inline-block; height:50%;"><a href="javascript:;" onClick="dialogo_titulo(2)"><div class="titulo" id="titulo2">Caja</div></a>
-				<div class="tile__list" id="box2">
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-      </div></div>
-        <div style="background:#FFF; width:50%; float:left; display:inline-block; height:50%;"><a href="javascript:;" onClick="dialogo_titulo(3)"><div class="titulo" id="titulo3">Caja</div></a>
-				<div class="tile__list" id="box3">
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-      </div></div>
-        <div style="background:#FFF; width:50%; float:left; display:inline-block; height:50%;"><a href="javascript:;" onClick="dialogo_titulo(4)"><div class="titulo" id="titulo4">Caja</div></a>
-				<div class="tile__list" id="box4">
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-      </div></div>
-        <div style="background:#FFF; width:50%; float:left; display:inline-block; height:50%;"><a href="javascript:;" onClick="dialogo_titulo(5)"><div class="titulo" id="titulo5">Caja</div></a>
-				<div class="tile__list" id="box5">
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-      </div></div>
+        <div style="background:#FFF; width:50%; float:left; display:inline-block; height:50%;"><?php caja(2);?></div>
+        <div style="background:#FFF; width:50%; float:left; display:inline-block; height:50%;"><?php caja(3);?></div>
+        <div style="background:#FFF; width:50%; float:left; display:inline-block; height:50%;"><?php caja(4);?></div>
+        <div style="background:#FFF; width:50%; float:left; display:inline-block; height:50%;"><?php caja(5);?></div>
       </div>
       <div style="background:#CCC; width:10%; float:left; display:inline-block; height:80%; text-align:center;">
         <div style="padding-top:250%;"><h2 class="rotar">DELTA</h2></div>
@@ -224,54 +186,10 @@ a:active {
       
   </div>
   <div style="background:#0F0; height:25%; max-height:25%;">
-    <div style="background:#BFE3FF; width:25%; float:left; display:inline-block; height:100%; overflow-y: scroll;"><a href="javascript:;" onClick="dialogo_titulo(6)"><div class="titulo" id="titulo6">Caja</div></a>
-				<div class="tile__list" id="box6">
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-      </div></div>
-    <div style="background:#DBFFCE; width:25%; float:left; display:inline-block; height:100%; overflow-y: scroll;"><a href="javascript:;" onClick="dialogo_titulo(7)"><div class="titulo" id="titulo7">Caja</div></a>
-				<div class="tile__list" id="box7">
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-      </div></div>
-    <div style="background:#BFE3FF; width:25%; float:left; display:inline-block; height:100%; overflow-y: scroll;"><a href="javascript:;" onClick="dialogo_titulo(8)"><div class="titulo" id="titulo8">Caja</div></a>
-				<div class="tile__list" id="box8">
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-      </div></div>
-    <div style="background:#DBFFCE; width:25%; float:left; display:inline-block; height:100%; overflow-y: scroll;"><a href="javascript:;" onClick="dialogo_titulo(9)"><div class="titulo" id="titulo9">Caja</div></a>
-				<div class="tile__list" id="box9">
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-        <div class="cuadro">11</div>
-      </div></div>
+    <div style="background:#BFE3FF; width:25%; float:left; display:inline-block; height:100%; overflow-y: scroll;"><?php caja(6);?></div>
+    <div style="background:#DBFFCE; width:25%; float:left; display:inline-block; height:100%; overflow-y: scroll;"><?php caja(7);?></div>
+    <div style="background:#BFE3FF; width:25%; float:left; display:inline-block; height:100%; overflow-y: scroll;"><?php caja(8);?></div>
+    <div style="background:#DBFFCE; width:25%; float:left; display:inline-block; height:100%; overflow-y: scroll;"><?php caja(9);?></div>
   </div>
 </div>
 
